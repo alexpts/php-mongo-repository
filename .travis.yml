@@ -7,10 +7,10 @@ services:
     - mongodb
 
 before_script:
+    #- pecl channel-update pecl.php.net
+    #- pecl install mongodb
     - composer self-update
-    - composer install --ignore-platform-reqs
-    - pecl channel-update pecl.php.net
-    - pecl install mongodb
+    - composer install
 
 script:
     - ./vendor/bin/phpunit --configuration ./test/phpunit.xml

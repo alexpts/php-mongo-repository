@@ -16,6 +16,16 @@ coding_style:
 
 
 build:
+    nodes:
+        my-node:
+            dependencies:
+                before:
+                    - pecl channel-update pecl.php.net
+                    - pecl install mongodb
+                    - composer self-update
+                    - composer install
+            services:
+                mongo: 4
     environment:
         php:
             version: 7.4
