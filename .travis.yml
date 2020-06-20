@@ -7,8 +7,9 @@ services:
     - mongodb
 
 before_script:
-    #- pecl channel-update pecl.php.net
-    #- pecl install mongodb
+    - pecl channel-update pecl.php.net
+    - pecl uninstall mongodb
+    - pecl install mongodb
     - composer self-update
     - composer install
 
