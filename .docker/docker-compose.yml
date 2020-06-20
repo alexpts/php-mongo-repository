@@ -1,0 +1,12 @@
+version: '2.4'
+
+services:
+    mongo:
+        image: mongo:4.2
+        restart: always
+        ports:
+            - 127.0.0.1:27017:27017
+        volumes:
+            - ./mongo/db/:/data/db
+        command: --directoryperdb --slowms 10
+        mem_limit: 128M
