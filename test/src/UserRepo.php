@@ -7,6 +7,6 @@ use PTS\MongoRepo\MongoRepo;
 
 class UserRepo extends MongoRepo
 {
-	protected string $tableName = 'users';
-	protected string $classModel = UserModel::class;
+    protected string $tableName = 'users';
+    protected string $classModel = UserModel::class;
 }

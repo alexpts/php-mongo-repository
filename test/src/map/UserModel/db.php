@@ -7,9 +7,9 @@ namespace Test\PTS\MongoRepo\src\map\UserModel;
  * @see TaskModel
  */
 return [
-	'_id' => [
-		'prop' => 'id'
-	],
-	'name' => [],
-	'email' => [],
+    '_id' => [
+        'prop' => 'id',
+    ],
+    'name' => [],
+    'email' => [],
 ];

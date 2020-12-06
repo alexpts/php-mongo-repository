@@ -11,16 +11,17 @@
 [integration tests](https://github.com/alexpts/php-mongo-repository/blob/master/test/integration/MongoRepoTest.php)
 
 ```php
-
-use use PTS\MongoRepo\CollectionManager;
+<?php
+use PTS\DataTransformer\DataTransformer;
+use PTS\MongoRepo\CollectionManager;
+use Test\PTS\MongoRepo\src\UserRepo;
 
 $collectionManager = new CollectionManager([
 	'dsn' => 'mongodb://127.0.0.1:27017/',
 	'db' => 'test'
-]];
+]);
 $mapper = new DataTransformer;
 $repo = new UserRepo($collectionManager, $mapper);
-
 
 $models = $repo->findModels(['name' => 'alex']); // models
 $docsAsArray = $models = $repo->find(['name' => 'alex']); // native mongo docs
