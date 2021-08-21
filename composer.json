@@ -16,7 +16,7 @@
     "require": {
         "php": "~8.0",
         "ext-mongodb": ">=1.9.1",
-        "mongodb/mongodb": "^1.8",
+        "mongodb/mongodb": "^1.9",
         "alexpts/php-data-transformer2": "^6.0"
     },
     "autoload": {
