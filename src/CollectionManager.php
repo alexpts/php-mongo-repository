@@ -17,7 +17,7 @@ class CollectionManager
     public function __construct(array $params)
     {
         $client = new Client(
-            $params['dsn'] ?? 'mongodb://127.0.0.1/',
+            $params['dsn'] ?? 'mongodb://127.0.0.1:27017/',
             $params['uriOptions'] ?? [],
             $params['driverOptions'] ?? []
         );
